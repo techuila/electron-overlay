@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.displayPhoto {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border-radius: 200px;
+}
+
+.displayName {
+  margin-right: 16px;
+}

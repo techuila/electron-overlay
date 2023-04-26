@@ -1,0 +1,35 @@
+.baseStyle {
+  width: fit-content;
+  height: 56px;
+  display: flex;
+  padding: 16px;
+  color: #ffffff;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gapBetween {
+  gap: 8px;
+}
+
+.primary {
+  background-color: #5200ff;
+}
+
+.secondary {
+  background-color: #210066;
+}
+
+.ghost {
+  background-color: transparent;
+  border: 1px solid #909090;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.baseStyle:hover {
+  cursor: pointer;
+}

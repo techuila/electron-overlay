@@ -1,0 +1,44 @@
+.container {
+  height: 88px;
+  display: flex;
+  margin: 0 64px;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+.left {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 88px;
+  height: 88px;
+}
+
+.referAFriend {
+  margin-left: 24px;
+}
+
+.notificationContainer {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  margin-left: 8px;
+  margin-right: 24px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #210066;
+}
+
+.notification {
+  width: 20px;
+  height: 23.5px;
+}

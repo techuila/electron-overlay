@@ -1,0 +1,15 @@
+.container {
+  height: 100%;
+  display: flex;
+  padding-top: 32px;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/img/sponsor_bg.png');
+  background-color: #000000;
+}
+
+.overlay {
+  background: none;
+  background-color: #00000099;
+}
