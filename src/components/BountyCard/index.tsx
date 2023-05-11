@@ -9,8 +9,11 @@ type BountyCardProps = {
 };
 
 function BountyCard({ info, title, backgroundImg }: BountyCardProps) {
+  function onClick() {
+    window.ipcRenderer.send('start');
+  }
   return (
-    <div className={styles.container} data-interactive-overlay>
+    <div className={styles.container} onClick={onClick} data-interactive-overlay>
       <div className={styles.content}>
         <span className={styles.info}>{info}</span>
         <h1 className={styles.title}>{title}</h1>

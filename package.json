@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "concurrently \"pnpm dev:vite\" \" pnpm dev:electron\"",
     "dev:vite": "vite",
-    "dev:electron": "npm run build:electron && electron .",
+    "dev:electron": "npm run build:electron && electron . --enable-logging",
     "build": "npm run build:vite && npm run build:electron",
     "build:vite": "vite build",
     "build:electron": "tsc -p electron",
@@ -34,10 +34,14 @@
   "dependencies": {
     "@vitejs/plugin-react": "^1.2.0",
     "classnames": "^2.3.2",
+    "cmake-js": "^7.2.1",
     "electron-is-dev": "^2.0.0",
+    "electron-rebuild": "^3.2.9",
+    "node-addon-api": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "vite": "^2.8.6"
+    "vite": "^2.8.6",
+    "electron-overlay": "file:electron-overlay"
   },
   "devDependencies": {
     "@types/node": "^17.0.22",

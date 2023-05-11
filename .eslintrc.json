@@ -26,7 +26,12 @@
     "@typescript-eslint/no-empty-function": "off",
 
     // Prettier
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     // Typescript
     "no-use-before-define": "off",
     "import/prefer-default-export": "off",
@@ -63,5 +68,5 @@
     },
     "import/core-modules": ["electron", "electron-is-dev"]
   },
-  "ignorePatterns": ["node_modules/", "dist/", "main/"]
+  "ignorePatterns": ["node_modules/", "dist/", "main/", "electron/utils/electron-overlay"]
 }
