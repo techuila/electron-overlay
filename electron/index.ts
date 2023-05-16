@@ -26,16 +26,18 @@ function addOverlayWindow(
   captionHeight = 0,
   transparent = false
 ) {
-  const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint());
-
+  // const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint());
+  console.log(window.isResizable());
+  console.log(window.getBounds().width);
+  console.log(window.getBounds().height);
   overlay.addWindow(window.id, {
     name,
     transparent,
     resizable: window.isResizable(),
-    maxWidth: window.isResizable() ? display.bounds.width : window.getBounds().width,
-    maxHeight: window.isResizable() ? display.bounds.height : window.getBounds().height,
-    minWidth: window.isResizable() ? 100 : window.getBounds().width,
-    minHeight: window.isResizable() ? 100 : window.getBounds().height,
+    maxWidth: window.getBounds().width,
+    maxHeight: window.getBounds().height,
+    minWidth: window.getBounds().width,
+    minHeight: window.getBounds().height,
     nativeHandle: window.getNativeWindowHandle().readUInt32LE(0),
     rect: {
       x: window.getBounds().x,
@@ -66,8 +68,8 @@ function addOverlayWindow(
       rect: {
         x: window.getBounds().x,
         y: window.getBounds().y,
-        width: Math.floor(window.getBounds().width * scaleFactor),
-        height: Math.floor(window.getBounds().height * scaleFactor)
+        width: Math.floor(width * scaleFactor),
+        height: Math.floor(height * scaleFactor)
       }
     });
   });
@@ -311,8 +313,8 @@ ipcMain.once('start', () => {
   const options = {
     x: 1,
     y: 1,
-    height: 360,
-    width: 640,
+    height: height,
+    width: width,
     frame: false,
     transparent: true,
     show: false,
